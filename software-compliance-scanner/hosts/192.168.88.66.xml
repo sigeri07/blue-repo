@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<host_info version="1.0">
+    <host>
+        <ip>192.168.88.66</ip>
+        <operating_system>
+            <product_name>Windows Server 2025 Datacenter</product_name>
+            <display_version>24H2</display_version>
+            <current_build>26100</current_build>
+            <ubr>33296</ubr>
+            <full_build>26100.33296</full_build>
+            <architecture>64-bit</architecture>
+            <installation_type>Server</installation_type>
+            <edition_id>ServerDatacenter</edition_id>
+            <build_branch>ge_release</build_branch>
+            <build_lab>26100.1.amd64fre.ge_release.240331-1435</build_lab>
+        </operating_system>
+        <software>
+            <application>
+                <display_name>Windows Admin Center (v2)</display_name>
+                <display_version>2.7.4.18</display_version>
+                <major_version>0x2</major_version>
+                <minor_version>0x7</minor_version>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\Program Files\WindowsAdminCenter\</install_location>
+                <uninstall_string>&quot;C:\Program Files\WindowsAdminCenter\unins000.exe&quot;</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\Program Files\WindowsAdminCenter\unins000.exe&quot; /SILENT</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\9B27DF2F-5386-41DF-B52B-5DF81914B043_is1</registry_key>
+            </application>
+            <application>
+                <display_name>Apache Tomcat 10.1 Tomcat10 (remove only)</display_name>
+                <display_version>10.1.57</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>The Apache Software Foundation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\Program Files\Apache Software Foundation\Tomcat 10.1\Uninstall.exe&quot; -ServiceName=&quot;Tomcat10&quot;</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Apache Tomcat 10.1 Tomcat10</registry_key>
+            </application>
+            <application>
+                <display_name>Hotfix 4210 for SQL Server 2022 (KB5063814) (64-bit)</display_name>
+                <display_version>16.0.4210.1</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Update Cache\KB5063814\QFE\setup.exe&quot; /Action=RemovePatch /AllInstances</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB5063814</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft SQL Server 2022 (64-bit)</display_name>
+                <display_version/>
+                <major_version/>
+                <minor_version/>
+                <publisher/>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string/>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft SQL Server 16</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft SQL Server 2022 (64-bit)</display_name>
+                <display_version/>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\SQL2022\x64\SetupARP.exe&quot;</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft SQL Server SQL2022</registry_key>
+            </application>
+            <application>
+                <display_name>Mozilla Firefox (x64 id)</display_name>
+                <display_version>154.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Mozilla</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\Program Files\Mozilla Firefox</install_location>
+                <uninstall_string>&quot;C:\Program Files\Mozilla Firefox\uninstall\helper.exe&quot;</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla Firefox</registry_key>
+            </application>
+            <application>
+                <display_name>Mozilla Maintenance Service</display_name>
+                <display_version>153.0.4</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Mozilla</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\Program Files (x86)\Mozilla Maintenance Service\uninstall.exe&quot;</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MozillaMaintenanceService</registry_key>
+            </application>
+            <application>
+                <display_name>Notepad++ (64-bit x64)</display_name>
+                <display_version>8.6.2</display_version>
+                <major_version>8</major_version>
+                <minor_version>62</minor_version>
+                <publisher>Notepad++ Team</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\software\Notepad++\uninstall.exe&quot;</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\software\Notepad++\uninstall.exe&quot; /S</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Notepad++</registry_key>
+            </application>
+            <application>
+                <display_name>OpenSSL 3.5.7 Light (64-bit)</display_name>
+                <display_version>3.5.7</display_version>
+                <major_version>0x3</major_version>
+                <minor_version>0x5</minor_version>
+                <publisher>OpenSSL Win64 Installer Team</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\Program Files\OpenSSL-Win64\</install_location>
+                <uninstall_string>&quot;C:\Program Files\OpenSSL-Win64\unins000.exe&quot;</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\Program Files\OpenSSL-Win64\unins000.exe&quot; /SILENT</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OpenSSL Light (64-bit)_is1</registry_key>
+            </application>
+            <application>
+                <display_name>WinRAR 7.00 beta 4 (64-bit)</display_name>
+                <display_version>7.00.4</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>win.rar GmbH</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\software\WinRAR</install_location>
+                <uninstall_string>C:\software\WinRAR\uninstall.exe</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WinRAR archiver</registry_key>
+            </application>
+            <application>
+                <display_name>XAMPP</display_name>
+                <display_version>8.2.12-0</display_version>
+                <major_version>0x8</major_version>
+                <minor_version>0x2</minor_version>
+                <publisher>Apache Friends</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\xampp</install_location>
+                <uninstall_string>&quot;C:\xampp\uninstall.exe&quot;</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\xampp</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 SQL Diagnostics</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{0CEFE958-E71A-4171-9DEF-77E9234A5613}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0CEFE958-E71A-4171-9DEF-77E9234A5613}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft ODBC Driver 17 for SQL Server</display_name>
+                <display_version>17.10.6.1</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{0E0F96AC-80DE-4400-A40C-429D63293651}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0E0F96AC-80DE-4400-A40C-429D63293651}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Shared Management Objects</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{12618131-AA9A-4DAE-9387-CE4417955B9F}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{12618131-AA9A-4DAE-9387-CE4417955B9F}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Database Engine Shared</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{161B8D12-C41B-4ACF-9BB5-E1FEE6788869}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{161B8D12-C41B-4ACF-9BB5-E1FEE6788869}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Windows Application Compatibility Fix Database</display_name>
+                <display_version/>
+                <major_version/>
+                <minor_version/>
+                <publisher/>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>%windir%\system32\sdbinst.exe -u &quot;C:\WINDOWS\AppPatch\CustomSDB\{22221111-1111-1111-1111-111111111111}.sdb&quot;</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{22221111-1111-1111-1111-111111111111}.sdb</registry_key>
+            </application>
+            <application>
+                <display_name>7-Zip 23.01 (x64 edition)</display_name>
+                <display_version>23.01.00.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Igor Pavlov</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{23170F69-40C1-2702-2301-000001000000}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{23170F69-40C1-2702-2301-000001000000}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft .NET Framework 4.5.2</display_name>
+                <display_version>4.5.51209</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{26784146-6E05-3FF9-9335-786C7C0FB5BE}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{26784146-6E05-3FF9-9335-786C7C0FB5BE}</registry_key>
+            </application>
+            <application>
+                <display_name>Java(TM) SE Development Kit 21.0.6 (64-bit)</display_name>
+                <display_version>21.0.6.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Oracle Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\Program Files\Java\jdk-21\</install_location>
+                <uninstall_string>MsiExec.exe /X{26F4C2FF-9E0F-5FD4-B66B-1B13F1068A00}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{26F4C2FF-9E0F-5FD4-B66B-1B13F1068A00}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft SQL Server 2022 Setup (English)</display_name>
+                <display_version>16.0.4210.1</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{284050B6-C120-415E-B84D-5C30DEF29386}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{284050B6-C120-415E-B84D-5C30DEF29386}</registry_key>
+            </application>
+            <application>
+                <display_name>Malwarebytes version 5.6.3.284</display_name>
+                <display_version>5.6.3.284</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Malwarebytes</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\Program Files\Malwarebytes\Anti-Malware</install_location>
+                <uninstall_string>&quot;C:\Program Files\Malwarebytes\Anti-Malware\mbuns.exe&quot; /uninstall /arp</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{35065F43-4BB2-439A-BFF7-0F1014F2E0CD}_is1</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Shared Management Objects Extensions</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{35EC6145-E333-42DB-BCB3-380DF6140C11}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{35EC6145-E333-42DB-BCB3-380DF6140C11}</registry_key>
+            </application>
+            <application>
+                <display_name>DB Browser for SQLite</display_name>
+                <display_version>3.13.1</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>DB Browser for SQLite Team</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\Program Files\DB Browser for SQLite\</install_location>
+                <uninstall_string>MsiExec.exe /I{541AE182-7C1D-426C-8155-4867303B75A4}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{541AE182-7C1D-426C-8155-4867303B75A4}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 DMF</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{5AB77D4E-9E5F-4627-B78B-129A5EC2858A}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{5AB77D4E-9E5F-4627-B78B-129A5EC2858A}</registry_key>
+            </application>
+            <application>
+                <display_name>Red Hat QXL controller</display_name>
+                <display_version>0.21.2.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Red Hat, Inc.</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{5E1A65FB-25EC-456D-859A-251996BF4BCE}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{5E1A65FB-25EC-456D-859A-251996BF4BCE}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161</display_name>
+                <display_version>9.0.30729.6161</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{5FCE6D76-F5DC-37AB-B2B8-22AB8CEDB1D4}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{5FCE6D76-F5DC-37AB-B2B8-22AB8CEDB1D4}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.50.35719</display_name>
+                <display_version>14.50.35719</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{61B44572-8722-4DAF-8ACF-8E742D30BCC5}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{61B44572-8722-4DAF-8ACF-8E742D30BCC5}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft SQL Server 2022 RsFx Driver</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{629C8FC9-3763-4C58-8264-5288AE34AFEF}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{629C8FC9-3763-4C58-8264-5288AE34AFEF}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Database Engine Services</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{6621C765-569C-4D46-A8E9-C69A47971357}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{6621C765-569C-4D46-A8E9-C69A47971357}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Common Files</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{6A68D32C-4C0D-4847-B70C-58E6B4D76A12}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{6A68D32C-4C0D-4847-B70C-58E6B4D76A12}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Shared Management Objects</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{6F8242AA-1B25-421C-8E45-FC5978D9AA3A}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{6F8242AA-1B25-421C-8E45-FC5978D9AA3A}</registry_key>
+            </application>
+            <application>
+                <display_name>Virtio-win-driver-installer</display_name>
+                <display_version>0.1.285</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Red Hat, Inc.</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{70392078-7A59-4DF6-BA2E-64B44FD0709F}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{70392078-7A59-4DF6-BA2E-64B44FD0709F}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft OLE DB Driver for SQL Server</display_name>
+                <display_version>18.7.4.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{76EB75D2-CCF6-41A9-90B6-922DE9146276}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{76EB75D2-CCF6-41A9-90B6-922DE9146276}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Connection Info</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{770DA7F2-817B-4AA6-9160-08BB658ABDC6}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{770DA7F2-817B-4AA6-9160-08BB658ABDC6}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Analysis Services OLE DB Provider</display_name>
+                <display_version>16.0.5143.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{7CA9BDB2-DC47-44B5-B384-8938B461CC38}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7CA9BDB2-DC47-44B5-B384-8938B461CC38}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Batch Parser</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{7EFD8B19-A9E6-41CF-A96F-B9B6E30EC345}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7EFD8B19-A9E6-41CF-A96F-B9B6E30EC345}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Common Files</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{8770AF64-BB4B-4404-BDD6-6AF8E4C461FC}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{8770AF64-BB4B-4404-BDD6-6AF8E4C461FC}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 XEvent</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{94AEB0A0-365C-449B-B573-D2ECB353EB06}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{94AEB0A0-365C-449B-B573-D2ECB353EB06}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Shared Management Objects Extensions</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{A0F7ACBA-075F-4BC7-A85A-5DC301FCEC74}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{A0F7ACBA-075F-4BC7-A85A-5DC301FCEC74}</registry_key>
+            </application>
+            <application>
+                <display_name>Revo Uninstaller 2.7.0</display_name>
+                <display_version>2.7.0</display_version>
+                <major_version>0x2</major_version>
+                <minor_version>0x7</minor_version>
+                <publisher>VS Revo Group, Ltd.</publisher>
+                <architecture>64-bit</architecture>
+                <install_location>C:\Program Files\VS Revo Group\Revo Uninstaller\</install_location>
+                <uninstall_string>&quot;C:\Program Files\VS Revo Group\Revo Uninstaller\unins000.exe&quot;</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\Program Files\VS Revo Group\Revo Uninstaller\unins000.exe&quot; /SILENT</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{A28DBDA2-3CC7-4ADC-8BFE-66D7743C6C97}_is1</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft VSS Writer for SQL Server 2022</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{AB5D8778-81F3-47E2-87A4-35E776CD664B}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{AB5D8778-81F3-47E2-87A4-35E776CD664B}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2022 X64 Additional Runtime - 14.50.35719</display_name>
+                <display_version>14.50.35719</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{AECD4ED0-8A3B-41E9-92D1-6BEE0374CCAF}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{AECD4ED0-8A3B-41E9-92D1-6BEE0374CCAF}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 XEvent</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{BD8B7339-7559-4FC3-95E6-264324D45235}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{BD8B7339-7559-4FC3-95E6-264324D45235}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Database Engine Services</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{C4CF167C-4739-4A3A-8D75-59C9C5F135CA}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C4CF167C-4739-4A3A-8D75-59C9C5F135CA}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Database Engine Shared</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{D6E82158-05B9-4A18-A624-EA135BC77766}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{D6E82158-05B9-4A18-A624-EA135BC77766}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 DMF</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{DCA0C2D6-83BF-41AE-B1AB-C4181002DE40}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{DCA0C2D6-83BF-41AE-B1AB-C4181002DE40}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server 2022 Connection Info</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{EAC54B82-7A37-4A9E-8953-474316BD40F6}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{EAC54B82-7A37-4A9E-8953-474316BD40F6}</registry_key>
+            </application>
+            <application>
+                <display_name>Spice Agent 0.10.0-5 (64-bit)</display_name>
+                <display_version>0.10.5</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Red Hat, Inc.</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{EE3877E4-07B0-41F2-ADB8-B45133DDCE37}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{EE3877E4-07B0-41F2-ADB8-B45133DDCE37}</registry_key>
+            </application>
+            <application>
+                <display_name>QEMU guest agent</display_name>
+                <display_version>110.0.2</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>RedHat</publisher>
+                <architecture>64-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{FBE4D84C-C935-4F54-B96F-49316CEB5149}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{FBE4D84C-C935-4F54-B96F-49316CEB5149}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Edge</display_name>
+                <display_version>152.0.4191.53</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location>C:\Program Files (x86)\Microsoft\Edge\Application</install_location>
+                <uninstall_string>&quot;C:\Program Files (x86)\Microsoft\Edge\Application\152.0.4191.53\Installer\setup.exe&quot; --uninstall --msedge --channel=stable --system-level --verbose-logging</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Edge</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Edge WebView2 Runtime</display_name>
+                <display_version>152.0.4191.53</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location>C:\Program Files (x86)\Microsoft\EdgeWebView\Application</install_location>
+                <uninstall_string>&quot;C:\Program Files (x86)\Microsoft\EdgeWebView\Application\152.0.4191.53\Installer\setup.exe&quot; --uninstall --msedgewebview --system-level --verbose-logging</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft EdgeWebView</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Help Viewer 2.3</display_name>
+                <display_version>2.3.28307</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location>C:\Program Files (x86)\Microsoft Help Viewer\v2.3\</install_location>
+                <uninstall_string>msiexec.exe /X{99DC6816-30B2-32EB-9E12-AF8944C4FA4E}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Help Viewer 2.3</registry_key>
+            </application>
+            <application>
+                <display_name>Virtio-win-guest-tools</display_name>
+                <display_version>0.1.285</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Red Hat, Inc.</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\ProgramData\Package Cache\{06a0ea15-9e7d-40a8-a2a2-e62469c1283f}\virtio-win-guest-tools.exe&quot;  /uninstall</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\ProgramData\Package Cache\{06a0ea15-9e7d-40a8-a2a2-e62469c1283f}\virtio-win-guest-tools.exe&quot; /uninstall /quiet</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{06a0ea15-9e7d-40a8-a2a2-e62469c1283f}</registry_key>
+            </application>
+            <application>
+                <display_name>Visual Studio 2017 Isolated Shell for SSMS</display_name>
+                <display_version>15.0.28308.421</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{0C69A55F-BC72-4AFB-BAEF-C5DEF9C32B9A}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{0C69A55F-BC72-4AFB-BAEF-C5DEF9C32B9A}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.29.30139</display_name>
+                <display_version>14.29.30139</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{1679EF65-55F3-4248-B91E-6B3BE1A69CDF}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{1679EF65-55F3-4248-B91E-6B3BE1A69CDF}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2019 X86 Additional Runtime - 14.29.30139</display_name>
+                <display_version>14.29.30139</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{1AEA8854-7597-4CD3-948F-8DE364D94E07}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{1AEA8854-7597-4CD3-948F-8DE364D94E07}</registry_key>
+            </application>
+            <application>
+                <display_name>MobaXterm</display_name>
+                <display_version>25.2.0.5296</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Mobatek</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{2BCC729C-27CC-4162-848E-A0D84EC1680D}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{2BCC729C-27CC-4162-848E-A0D84EC1680D}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft SQL Server Management Studio - 19.3</display_name>
+                <display_version>19.3.4.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\ProgramData\Package Cache\{3d085a78-e2bb-4bc5-b87b-5239bdf01d57}\SSMS-Setup-ENU.exe&quot;  /uninstall</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\ProgramData\Package Cache\{3d085a78-e2bb-4bc5-b87b-5239bdf01d57}\SSMS-Setup-ENU.exe&quot; /uninstall /quiet</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{3d085a78-e2bb-4bc5-b87b-5239bdf01d57}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server Management Studio</display_name>
+                <display_version>19.3.4.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corp.</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{60FB9AFB-6651-4E9B-AF2C-2DE72472913A}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{60FB9AFB-6651-4E9B-AF2C-2DE72472913A}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40664</display_name>
+                <display_version>12.0.40664</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{8122DAB1-ED4D-3676-BB0A-CA368196543E}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{8122DAB1-ED4D-3676-BB0A-CA368196543E}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.29.30139</display_name>
+                <display_version>14.29.30139.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\ProgramData\Package Cache\{8d5fdf81-7022-423f-bd8b-b513a1050ae1}\VC_redist.x86.exe&quot;  /uninstall</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\ProgramData\Package Cache\{8d5fdf81-7022-423f-bd8b-b513a1050ae1}\VC_redist.x86.exe&quot; /uninstall /quiet</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{8d5fdf81-7022-423f-bd8b-b513a1050ae1}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Analysis Services OLE DB Provider</display_name>
+                <display_version>16.0.5143.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{8D96B285-698F-42BA-B483-A0A54D75ECD6}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{8D96B285-698F-42BA-B483-A0A54D75ECD6}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ v14 Redistributable (x64) - 14.50.35719</display_name>
+                <display_version>14.50.35719.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\ProgramData\Package Cache\{91ee571b-0e8a-4c65-9eaf-2e2f5fc60c00}\VC_redist.x64.exe&quot;  /uninstall</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\ProgramData\Package Cache\{91ee571b-0e8a-4c65-9eaf-2e2f5fc60c00}\VC_redist.x64.exe&quot; /uninstall /quiet</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{91ee571b-0e8a-4c65-9eaf-2e2f5fc60c00}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Help Viewer 2.3</display_name>
+                <display_version>2.3.28307</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{99DC6816-30B2-32EB-9E12-AF8944C4FA4E}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{99DC6816-30B2-32EB-9E12-AF8944C4FA4E}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161</display_name>
+                <display_version>9.0.30729.6161</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{9BE518E6-ECC6-35A9-88E4-87755C07200F}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{9BE518E6-ECC6-35A9-88E4-87755C07200F}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40664</display_name>
+                <display_version>12.0.40664.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>&quot;C:\ProgramData\Package Cache\{9dff3540-fc85-4ed5-ac84-9e3c7fd8bece}\vcredist_x86.exe&quot;  /uninstall</uninstall_string>
+                <quiet_uninstall_string>&quot;C:\ProgramData\Package Cache\{9dff3540-fc85-4ed5-ac84-9e3c7fd8bece}\vcredist_x86.exe&quot; /uninstall /quiet</quiet_uninstall_string>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{9dff3540-fc85-4ed5-ac84-9e3c7fd8bece}</registry_key>
+            </application>
+            <application>
+                <display_name>Integration Services</display_name>
+                <display_version>16.0.5395.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{D116588C-C4FE-4BA9-8D56-4D734F82D83C}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{D116588C-C4FE-4BA9-8D56-4D734F82D83C}</registry_key>
+            </application>
+            <application>
+                <display_name>Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40664</display_name>
+                <display_version>12.0.40664</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{D401961D-3A20-3AC7-943B-6139D5BD490A}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{D401961D-3A20-3AC7-943B-6139D5BD490A}</registry_key>
+            </application>
+            <application>
+                <display_name>SSMS Post Install Tasks</display_name>
+                <display_version>19.3.4.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{DCD02E4A-F8DE-4547-ADEA-0DFD2EA50FD4}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{DCD02E4A-F8DE-4547-ADEA-0DFD2EA50FD4}</registry_key>
+            </application>
+            <application>
+                <display_name>SQL Server Management Studio Language Pack - English</display_name>
+                <display_version>19.3.4.0</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corp.</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /I{EF66838B-0482-4DE2-8E8C-CD87F1642482}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{EF66838B-0482-4DE2-8E8C-CD87F1642482}</registry_key>
+            </application>
+            <application>
+                <display_name>Browser for SQL Server 2022</display_name>
+                <display_version>16.0.1000.6</display_version>
+                <major_version/>
+                <minor_version/>
+                <publisher>Microsoft Corporation</publisher>
+                <architecture>32-bit</architecture>
+                <install_location/>
+                <uninstall_string>MsiExec.exe /X{FDB357D5-CC78-480A-8D26-C15D1A877642}</uninstall_string>
+                <quiet_uninstall_string/>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{FDB357D5-CC78-480A-8D26-C15D1A877642}</registry_key>
+            </application>
+        </software>
+        <msi_products>
+            <product>
+                <product_name>SQL Server 2022 XEvent</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\0A0BEA49C563B9445B372DCE3B35BE60</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2022 X64 Additional Runtime - 14.50.35719</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\0DE4DCEAB3A89E14291DB6EE3047CCFA</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Shared Management Objects</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\13181621A9AAEAD43978EC447159B5F9</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40664</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\1BAD2218D4DE6763BBA0AC63186945E3</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Database Engine Shared</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\21D8B161B14CFCA4B95B1EEF6E878896</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.50.35719</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\27544B162278FAD4A8FCE847D203CB5C</registry_key>
+            </product>
+            <product>
+                <product_name>DB Browser for SQLite</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\281EA145D1C7C6241855847603B3574A</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Connection Info</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\28B45CAE73A7E9A49835743461DB046F</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Analysis Services OLE DB Provider</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\2BDB9AC774CD5B443B4898834B16CC83</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft OLE DB Driver for SQL Server</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\2D57BE676FCC9A14096B29D29E412667</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Connection Info</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\2F7AD077B7186AA4190680BB56A8DB6C</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2019 X86 Additional Runtime - 14.29.30139</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\4588AEA179573DC449F8D83E469DE470</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Common Files</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\46FA0778B4BB4044DB6DA68F4E4C16CF</registry_key>
+            </product>
+            <product>
+                <product_name>Spice Agent 0.10.0-5 (64-bit)</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\4E7783EE0B702F14DA8B4B1533DDEC73</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Shared Management Objects Extensions</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\5416CE53333EBD24CB3B83D06F41C011</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Database Engine Services</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\567C1266C96564D48A9E6CA974793175</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.29.30139</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\56FE97613F5584249BE1B6B31E6AC9FD</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Analysis Services OLE DB Provider</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\582B69D8F896AB244B380A5AD457CE6D</registry_key>
+            </product>
+            <product>
+                <product_name>Browser for SQL Server 2022</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\5D753BDF87CCA084D8621CD5A1786724</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Help Viewer 2.3</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\6186CD992B03BE23E921FA98444CAFE4</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft .NET Framework 4.5.2</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\6414876250E69FF3395387C6C7F05BEB</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\67D6ECF5CD5FBA732B8B22BAC8DE1B4D</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft SQL Server 2022 Setup (English)</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\6B050482021CE5148BD4C503ED2F3968</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 DMF</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\6D2C0ACDFB38EA141BBA4C810120ED04</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\6E815EB96CCE9A53884E7857C57002F0</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Database Engine Shared</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\85128E6D9B5081A46A42AE31B57C7766</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 SQL Diagnostics</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\859EFEC0A17E1714D9FE779E32A46531</registry_key>
+            </product>
+            <product>
+                <product_name>Virtio-win-driver-installer</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\8702930795A76FD4ABE2464BF40D07F9</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft VSS Writer for SQL Server 2022</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\8778D5BA3F182E74784A537E67DC66B4</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Batch Parser</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\91B8DFE76E9AFC149AF69B6B3EE03C54</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 XEvent</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\9337B8DB95573CF4596E6234424D2553</registry_key>
+            </product>
+            <product>
+                <product_name>7-Zip 23.01 (x64 edition)</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\96F071321C0420723210000010000000</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft SQL Server 2022 RsFx Driver</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\9CF8C926367385C428462588EA43FAFE</registry_key>
+            </product>
+            <product>
+                <product_name>SSMS Post Install Tasks</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\A4E20DCDED8F7454DAAED0DFE25AF04D</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Shared Management Objects</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\AA2428F652B1C124E854CF95879DAAA3</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Shared Management Objects Extensions</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\ABCA7F0AF5707CB48AA5D53C10CFCE47</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server Management Studio Language Pack - English</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\B83866FE28402ED4E8C8DC781F464228</registry_key>
+            </product>
+            <product>
+                <product_name>Red Hat QXL controller</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\BF56A1E5CE52D65458A9529169FBB4EC</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server Management Studio</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\BFA9BF061566B9E4FAC2D27E422719A3</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Common Files</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\C23D86A6D0C474847BC0856E4B7DA621</registry_key>
+            </product>
+            <product>
+                <product_name>QEMU guest agent</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\C48D4EBF539C45F49BF69413C6BE1594</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 Database Engine Services</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\C761FC4C9374A3A4D857959C5C1F53AC</registry_key>
+            </product>
+            <product>
+                <product_name>Integration Services</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\C885611DEF4C9AB4D865D437F4288DC3</registry_key>
+            </product>
+            <product>
+                <product_name>MobaXterm</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\C927CCB2CC72261448E80A8DE41C86D0</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft ODBC Driver 17 for SQL Server</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\CA69F0E0ED0800444AC024D936926315</registry_key>
+            </product>
+            <product>
+                <product_name>Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40664</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\D169104D02A37CA349B316935DDB94A0</registry_key>
+            </product>
+            <product>
+                <product_name>SQL Server 2022 DMF</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\E4D77BA5F5E972647BB821A9E52C58A8</registry_key>
+            </product>
+            <product>
+                <product_name>Visual Studio 2017 Isolated Shell for SSMS</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\F55A96C027CBBFA4ABFE5CED9F3CB2A9</registry_key>
+            </product>
+            <product>
+                <product_name>Java(TM) SE Development Kit 21.0.6 (64-bit)</product_name>
+                <product_version/>
+                <display_name/>
+                <architecture>64-bit</architecture>
+                <registry_key>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\FF2C4F62F0E94DF56BB6B1311F60A800</registry_key>
+            </product>
+        </msi_products>
+    </host>
+</host_info>

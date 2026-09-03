@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<software_policy>
+
+    <software
+        name="Java"
+        minimum_version="17.0.12">
+
+        <match>
+            <contains>Java</contains>
+            <contains>JDK</contains>
+            <contains>JRE</contains>
+            <contains>OpenJDK</contains>
+        </match>
+
+    </software>
+
+
+    <software
+        name="Notepad++"
+        minimum_version="8.8.5">
+
+        <match>
+            <contains>Notepad++</contains>
+        </match>
+
+    </software>
+
+
+    <software
+        name="WinRAR"
+        minimum_version="7.01">
+
+        <match>
+            <contains>WinRAR</contains>
+        </match>
+
+    </software>
+
+</software_policy>
