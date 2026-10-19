@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><title>ExamHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f5f6fa;--cd:#fff;--tx:#1b1f2a;--mu:#667085;--ac:#4f46e5;--al:#eceeff;--bd:#e2e5ee;--ok:#15803d;--er:#dc2626}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1019;--cd:#171a27;--tx:#eceef6;--mu:#98a0b6;--ac:#818cf8;--al:#23274a;--bd:#2a2e42;--ok:#4ade80;--er:#f87171}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0e1019;--cd:#171a27;--tx:#eceef6;--mu:#98a0b6;--ac:#818cf8;--al:#23274a;--bd:#2a2e42;--ok:#4ade80;--er:#f87171}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.top{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--cd);border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.top b{font-size:17px}.nav a{padding:6px 12px;border-radius:99px;color:var(--mu);text-decoration:none;font-size:13px}.nav a.on{background:var(--al);color:var(--ac);font-weight:600}
+main{max-width:900px;margin:0 auto;padding:16px}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:16px;margin-bottom:14px}
+h2,h3{margin:0 0 10px}.mu{color:var(--mu);font-size:13px}.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+input,select,textarea{width:100%;padding:9px 11px;border:1px solid var(--bd);border-radius:9px;background:var(--bg);color:var(--tx);font:inherit;margin:4px 0 10px}
+label{font-size:13px;color:var(--mu)}
+button{font:inherit;cursor:pointer;border-radius:9px;padding:8px 14px;border:1px solid var(--bd);background:var(--cd);color:var(--tx)}
+.p{background:var(--ac);border-color:var(--ac);color:#fff}.d{color:var(--er)}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}.tabs button.on{background:var(--al);color:var(--ac);border-color:var(--ac)}
+.pill{padding:3px 10px;border-radius:99px;background:var(--al);color:var(--ac);font-size:12px;font-weight:600}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px}.opt.sel{background:var(--al);border-color:var(--ac)}
+.num{width:36px;height:36px;padding:0;margin:3px}.num.sel{background:var(--ac);color:#fff}.num.cur{outline:2px solid var(--ac)}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--bd);white-space:nowrap}th{color:var(--mu);font-weight:600;font-size:12px}
+.er{color:var(--er)}.ok{color:var(--ok)}.big{font-size:48px;font-weight:700;color:var(--ac)}
+.evr pre{margin:2px 0 10px;white-space:pre-wrap;word-break:break-word;font:12px/1.45 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px}
+.qb{border-top:1px solid var(--bd);padding:10px 0}code{background:var(--al);padding:1px 6px;border-radius:5px;word-break:break-all}details{margin-top:8px}.tint{border-left:6px solid var(--gc);background:color-mix(in srgb,var(--gc) 8%,var(--cd))}.tint h3{color:var(--gc)}.evr .idb{display:inline-block;background:var(--gc);color:#fff;border-radius:6px;padding:1px 8px;font-size:12px}.evr pre{border-left:4px solid var(--gc)}.gb{border:1px solid var(--bd);border-radius:12px;padding:12px;margin:10px 0}.mono{font:12px/1.4 ui-monospace,Menlo,Consolas,monospace}summary{cursor:pointer;color:var(--ac)}
+/* ---- polish: tampilan exam ---- */
+:root{--sh:0 1px 2px rgba(16,24,40,.05),0 1px 3px rgba(16,24,40,.04)}
+body{line-height:1.55;-webkit-font-smoothing:antialiased}
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--cd) 88%,transparent);backdrop-filter:blur(10px)}
+.card{box-shadow:var(--sh)}
+h2{font-size:22px;letter-spacing:-.01em;font-weight:650}h3{font-size:17px;letter-spacing:-.005em;font-weight:650}
+button{transition:background .15s,border-color .15s,transform .05s}button:hover:not(:disabled){border-color:var(--ac);background:var(--al)}button:active:not(:disabled){transform:translateY(1px)}
+button:disabled{opacity:.55;cursor:not-allowed}
+.p:hover:not(:disabled){background:color-mix(in srgb,var(--ac) 88%,#000);border-color:transparent}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+input:focus,textarea:focus,select:focus{border-color:var(--ac)}
+.tabs button{border-radius:99px;padding:7px 16px}
+.tw tr:hover td{background:color-mix(in srgb,var(--al) 45%,transparent)}
+.grid{gap:14px}.grid>.card{display:flex;flex-direction:column;margin:0;padding:18px}
+.grid>.card h3{margin-bottom:6px}.grid>.card>p{margin:0 0 10px}.grid>.card>p.mu:first-of-type{flex:1}
+.grid>.card .pill{margin-right:4px}.grid>.card>button{margin-top:6px;width:100%}
+.pill{display:inline-block;padding:3px 10px}
+.pill.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}.pill.er{background:color-mix(in srgb,var(--er) 14%,transparent);color:var(--er)}
+.qc{padding:20px}.qt{font-size:19px;line-height:1.45;margin:6px 0 16px;font-weight:600}
+.prog{height:6px;border-radius:99px;background:var(--bd);overflow:hidden;margin:12px 0 8px}.prog i{display:block;height:100%;background:var(--ac);border-radius:99px;transition:width .25s}
+.tm{font-variant-numeric:tabular-nums;font-size:13px;padding:4px 12px}.tm.warn{background:color-mix(in srgb,var(--er) 16%,transparent);color:var(--er)}
+.opt{display:flex;gap:12px;align-items:flex-start;margin:8px 0;padding:12px 14px;border-radius:12px;line-height:1.45}
+.opt .lt{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--bd);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--mu)}
+.opt.sel{border-color:var(--ac);background:var(--al)}.opt.sel .lt{background:var(--ac);border-color:var(--ac);color:#fff}
+.num{border-radius:10px;font-variant-numeric:tabular-nums}.num.cur{outline-offset:1px}
+.ring{width:132px;height:132px;border-radius:50%;margin:8px auto 14px;display:grid;place-items:center;background:conic-gradient(var(--rc,var(--ac)) calc(var(--p)*1%),var(--bd) 0)}
+.ring span{width:102px;height:102px;border-radius:50%;background:var(--cd);display:grid;place-items:center;font-size:38px;font-weight:700;font-variant-numeric:tabular-nums}
+.rq{border-top:1px solid var(--bd);padding:14px 0}.ro{padding:6px 10px;border-radius:8px;margin-top:4px;font-size:14px}
+.ro.ok{background:color-mix(in srgb,var(--ok) 13%,transparent)}.ro.er{background:color-mix(in srgb,var(--er) 12%,transparent)}
+@media(max-width:560px){main{padding:12px}.card{padding:14px}.qc{padding:16px}.qt{font-size:17px}h2{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ---- polish: halaman masuk ---- */
+.auth{display:flex;flex-direction:column;align-items:center;padding:28px 0 8px}
+.auth-card{width:100%;max-width:400px;background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:32px 28px;box-shadow:0 12px 32px rgba(16,24,40,.08)}
+.auth .logo{width:48px;height:48px;border-radius:14px;background:var(--ac);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
+.auth h2{margin:0 0 4px;font-size:24px}.auth .sub{margin:0 0 24px;font-size:14px}
+.fld label{display:block;margin-bottom:5px;font-weight:500;color:var(--tx)}.fld input{margin:0 0 16px;padding:11px 12px}
+.pw{position:relative}.pw input{padding-right:104px}.pw button{position:absolute;right:6px;top:5px;padding:5px 10px;border:0;background:none;color:var(--ac);font-size:13px}
+.auth .er{background:color-mix(in srgb,var(--er) 12%,transparent);padding:9px 12px;border-radius:9px;margin:0 0 14px;font-size:13px}.auth .er:empty{display:none}
+.auth .go{width:100%;padding:11px;font-weight:600}
+button.lnk{border:0;background:none;color:var(--ac);padding:0;font-weight:600}button.lnk:hover:not(:disabled){background:none;border-color:transparent;text-decoration:underline}
+.auth-note{max-width:400px;text-align:center;margin-top:16px}
+@media(max-width:560px){.auth{padding-top:8px}.auth-card{padding:24px 20px}}
+</style></head><body>
+<div class="top"><b>📝 ExamHub</b><div class="nav" id="nav"></div></div>
+<main id="app"><p class="mu">Memuat…</p></main>
+<script>
+const $=q=>document.querySelector(q),val=i=>$('#'+i).value,A={};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const H=async p=>sha256('exh:'+p);
+const fmt=t=>new Date(t).toLocaleString('id-ID',{dateStyle:'medium',timeStyle:'short'});
+function sha256(m){const r=(n,b)=>(n>>>b)|(n<<(32-b)),k=[],h=[];let c=0;
+for(let n=2;c<64;n++){let p=1;for(let i=2;i*i<=n;i++)if(n%i==0){p=0;break}if(p){if(c<8)h[c]=Math.pow(n,.5)*2**32|0;k[c++]=Math.pow(n,1/3)*2**32|0}}
+const x=[...new TextEncoder().encode(m)],l=x.length*8;x.push(128);while(x.length%64!=56)x.push(0);for(let i=7;i>=0;i--)x.push(i>3?0:(l>>>(i*8))&255);
+for(let o=0;o<x.length;o+=64){const w=[];for(let i=0;i<16;i++)w[i]=(x[o+4*i]<<24)|(x[o+4*i+1]<<16)|(x[o+4*i+2]<<8)|x[o+4*i+3];
+for(let i=16;i<64;i++){const a=w[i-15],b=w[i-2];w[i]=(w[i-16]+(r(a,7)^r(a,18)^(a>>>3))+w[i-7]+(r(b,17)^r(b,19)^(b>>>10)))|0}
+let v=h.slice();for(let i=0;i<64;i++){const[a,b,c2,d,e,f,g,q]=v,t1=(q+(r(e,6)^r(e,11)^r(e,25))+((e&f)^(~e&g))+k[i]+w[i])|0,t2=((r(a,2)^r(a,13)^r(a,22))+((a&b)^(a&c2)^(b&c2)))|0;v=[(t1+t2)|0,a,b,c2,(d+t1)|0,e,f,g]}
+v.forEach((y,i)=>h[i]=(h[i]+y)|0)}
+return h.map(y=>(y>>>0).toString(16).padStart(8,'0')).join('')}
+/* Offline storage: same API the app used, backed by server.py */
+const API=(P=>(P.endsWith('/')||/\.[a-z]+$/i.test(P)?P.replace(/[^/]*$/,''):P+'/')+'api/')(location.pathname); /* relatif: aman di belakang nginx subpath */
+function mkDb(){const uid=()=>[...crypto.getRandomValues(new Uint8Array(10))].map(x=>x.toString(16).padStart(2,'0')).join('');
+ const j=async(m,u,b)=>{const r=await fetch(API+u,{method:m,headers:{'Content-Type':'application/json'},body:b&&JSON.stringify(b)});if(r.status==404)return null;if(!r.ok)throw new Error((await r.text()).slice(0,200)||'Server error');return r.json()};
+ const snap=(id,d)=>({id,exists:d!=null,data:()=>d||undefined});
+ const doc=p=>{const[c,id]=p.split('/');return{id,get:async()=>snap(id,await j('GET',`d/${c}/${id}`)),set:d=>j('PUT',`d/${c}/${id}`,d),update:d=>j('PATCH',`d/${c}/${id}`,d),delete:()=>j('DELETE',`d/${c}/${id}`)}};
+ const q=(c,f=[],lim=0)=>({where:(a,o,v)=>q(c,[...f,[a,v]],lim),limit:n=>q(c,f,n),get:async()=>{let l=await j('GET','c/'+c)||[];l=l.filter(x=>f.every(([a,v])=>x.data[a]===v));if(lim)l=l.slice(0,lim);const docs=l.map(x=>snap(x.id,x.data));return{docs,empty:!docs.length,size:docs.length}}});
+ return{doc,collection:c=>({...q(c),doc:id=>doc(c+'/'+(id||uid())),add:async d=>{const id=uid();await j('PUT',`d/${c}/${id}`,d);return{id}}})}}
+let db,usr,app=$('#app'),S={role:'peserta',tab:'exams',pt:'exam'},M={peserta:null,admin:null},F=null,T=null,ex=null,tick=0,EX={},CT={},cx=null,CS=null;
+try{M=JSON.parse(sessionStorage.getItem('exh')||'')||M}catch(e){}
+const keep=()=>{try{sessionStorage.setItem('exh',JSON.stringify(M))}catch(e){}};
+const err=e=>{$('#err').textContent=e.message||e};
+function nav(){S.role=location.hash.startsWith('#admin')?'admin':'peserta';$('#nav').innerHTML=`<a href="#" class="${S.role=='peserta'?'on':''}">Portal Peserta</a><a href="#admin" class="${S.role=='admin'?'on':''}">Portal Admin</a>`}
+addEventListener('hashchange',()=>{clearInterval(tick);render()});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b)return;
+ if(b.dataset.c&&!b.dataset.s){b.dataset.s=1;const t=b.textContent;b.textContent='Yakin?';setTimeout(()=>{b.textContent=t;delete b.dataset.s},2500);return}
+ A[b.dataset.a]?.(b.dataset,b)});
+(async()=>{db=mkDb();usr={isOwner:()=>true};await 0;
+ try{const r=await fetch(API+'health'),t=await r.text();if(!r.ok||t.trim()[0]!='{')throw new Error(r.ok?'Respons bukan dari server ExamHub — cek proxy_pass di nginx (path /api harus diteruskan)':t)}
+ catch(e){app.innerHTML=`<div class="card"><h3>Server belum bisa dipakai</h3><p class="er">${esc(e.message)}</p><p class="mu">Cek log server (journalctl / terminal) dan konfigurasi nginx.</p></div>`;nav();return}
+ if(!db){app.innerHTML='<div class="card"><h3>Tidak dapat terhubung ke database</h3><p class="mu">Buka halaman ini melalui tautan claude.ai (sudah masuk akun claude.ai) agar data tersimpan.</p></div>';nav();return}
+ render()})();
+function render(){nav();clearInterval(tick);const u=M[S.role];if(!u)return authView();S.role=='admin'?aView():pView()}
+async function authView(mode='in'){
+ let setup=false;
+ if(S.role=='admin'){const q=await db.collection('users').where('role','==','admin').limit(1).get();setup=q.empty}
+ const reg=mode=='reg'||setup,canReg=S.role=='peserta'||(setup&&usr?.isOwner()),adm=S.role=='admin',
+  title=setup?'Buat akun admin pertama':adm?'Masuk Admin':reg?'Buat akun':'Masuk ke ExamHub',
+  sub=setup?'Akun ini akan mengelola exam, kasus CTF, dan pengguna.':adm?'Kelola exam, kasus CTF, dan skor peserta.':reg?'Daftar untuk mulai mengerjakan exam dan kasus CTF.':'Kerjakan exam dan kasus CTF untuk mengecek kesiapanmu.';
+ app.innerHTML=`<div class="auth"><div class="auth-card"><div class="logo">📝</div><h2>${title}</h2><p class="mu sub">${sub}</p>
+ ${setup&&!usr?.isOwner()?'<p class="mu">Belum ada admin. Pemilik halaman ini perlu membuat akun admin pertama.</p>':`
+ ${reg?'<div class="fld"><label for="n">Nama lengkap</label><input id="n" autocomplete="name"></div>':''}
+ <div class="fld"><label for="u">Username</label><input id="u" autocapitalize="none" autocomplete="username" spellcheck="false"></div>
+ <div class="fld"><label for="p">Password</label><div class="pw"><input id="p" type="password" autocomplete="${reg?'new-password':'current-password'}"><button type="button" data-a="pw">Lihat</button></div></div>
+ <p id="err" class="er"></p><button class="p go" data-a="${reg?'reg':'login'}">${reg?'Daftar':'Masuk'}</button>
+ ${canReg&&!setup?`<p class="mu" style="text-align:center;margin:16px 0 0">${reg?'Sudah punya akun?':'Belum punya akun?'} <button type="button" class="lnk" data-a="mode" data-m="${reg?'in':'reg'}">${reg?'Masuk':'Daftar'}</button></p>`:''}`}</div>
+ ${adm?'':'<p class="mu auth-note">Exam di sini adalah self-assessment. Hasilnya untuk kamu sendiri.</p>'}</div>`;
+ ($('#n')||$('#u'))?.focus()}
+A.pw=(d,b)=>{const p=$('#p'),s=p.type=='password';p.type=s?'text':'password';b.textContent=s?'Sembunyikan':'Lihat'};
+document.addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.tagName=='INPUT'&&e.target.closest('.auth')){const b=$('.auth [data-a="login"],.auth [data-a="reg"]');if(b)b.click()}});
+A.mode=(d)=>authView(d.m);
+A.login=async()=>{try{const u=val('u').trim().toLowerCase(),s=await db.doc('users/'+u).get();if(!s.exists)throw'Username tidak ditemukan';const d=s.data();if(d.pw!==await H(val('p')))throw'Password salah';if(S.role=='admin'&&d.role!='admin')throw'Akun ini bukan admin';M[S.role]={id:u,name:d.name,role:d.role};keep();render()}catch(e){err(e)}};
+A.reg=async()=>{try{const u=val('u').trim().toLowerCase(),n=val('n').trim(),p=val('p');if(!n)throw'Nama wajib diisi';if(!/^[a-z0-9_.-]{3,20}$/.test(u))throw'Username 3–20 karakter (huruf kecil, angka, _ . -)';if(p.length<6)throw'Password minimal 6 karakter';
+ if((await db.doc('users/'+u).get()).exists)throw'Username sudah dipakai';
+ await db.doc('users/'+u).set({name:n,pw:await H(p),role:S.role=='admin'?'admin':'peserta',at:Date.now()});M[S.role]={id:u,name:n,role:S.role=='admin'?'admin':'peserta'};keep();render()}catch(e){err(e)}};
+A.out=()=>{M[S.role]=null;keep();render()};
+const bar=u=>`<div class="row" style="margin-bottom:14px"><div><h2 style="margin:0">Halo, ${esc(u.name)}</h2><span class="mu">@${esc(u.id)}</span></div><button data-a="out">Keluar</button></div>`;
+
+/* ===== PESERTA ===== */
+async function pView(){const u=M.peserta;app.innerHTML=bar(u)+'<p class="mu">Memuat…</p>';
+ const [e,a,c]=await Promise.all([db.collection('exams').get(),db.collection('attempts').where('uid','==',u.id).get(),db.collection('ctf').get()]);
+ EX={};e.docs.forEach(d=>EX[d.id]={id:d.id,...d.data()});CT={};c.docs.forEach(d=>CT[d.id]={id:d.id,...d.data()});
+ const isC=S.pt=='ctf',now=Date.now(),list=Object.values(isC?CT:EX).filter(x=>x.active!==false),at=a.docs.map(d=>({id:d.id,...d.data()})).sort((x,y)=>y.at-x.at);AT={};at.forEach(x=>AT[x.id]=x);
+ app.innerHTML=bar(u)+`<div class="tabs"><button class="${isC?'':'on'}" data-a="ptab" data-t="exam">📝 Exam</button><button class="${isC?'on':''}" data-a="ptab" data-t="ctf">🚩 CTF</button></div>
+ <h3>${isC?'Pilih Kasus CTF':'Pilih Exam'}</h3><div class="grid">${list.map(x=>{const closed=x.until&&now>new Date(x.until).getTime();return`<div class="card"><h3>${esc(x.title)}</h3><p class="mu">${esc((x.desc||'').slice(0,160))}${(x.desc||'').length>160?'…':''}</p>
+ <p><span class="pill">${x.qs.length} soal</span> ${isC?`<span class="pill">${(x.ev||[]).length} evidence</span> ${x.dur?`<span class="pill">${x.dur} menit</span>`:''}`:`<span class="pill">${x.dur} menit</span>`}</p><p class="mu">${x.until?'Dibuka sampai '+fmt(x.until):'Tanpa batas waktu buka'}</p>
+ ${closed?'<button disabled>Ditutup</button>':`<button class="p" data-a="${isC?'cstart':'start'}" data-id="${x.id}">${isC?'Mulai Analisa':'Mulai Exam'}</button>`}</div>`}).join('')||`<p class="mu">${isC?'Belum ada kasus CTF tersedia.':'Belum ada exam tersedia.'}</p>`}</div>
+ <h3 style="margin-top:20px">Riwayat Saya</h3><div id="dt"></div><div class="card tw"><table><tr><th>Exam</th><th>Skor</th><th>Status</th><th>Benar</th><th>Waktu</th><th></th></tr>${at.map(x=>`<tr><td>${esc(x.etitle)}</td><td><b>${x.score}</b></td><td>${badge(x)}</td><td>${x.correct}/${x.total}</td><td>${fmt(x.at)}</td><td><button data-a="det" data-id="${x.id}">Lihat jawaban</button></td></tr>`).join('')||'<tr><td colspan=6 class="mu">Belum ada riwayat.</td></tr>'}</table></div>`}
+A.start=({id})=>{ex=EX[id];app.innerHTML=`<div class="card" style="max-width:520px;margin:20px auto"><h2>📝 Baca dulu sebentar ya</h2>
+ <p>Exam <b>${esc(ex.title)}</b> ini adalah <b>self-assessment</b> — cara buat ngecek apakah kamu sebagai engineer udah siap ngambil exam yang sebenarnya. Hasilnya buat kamu sendiri, bukan buat dihakimi.</p>
+ <p>Biar hasilnya jujur dan berguna, selama ngerjain tolong <b>jangan buka Google, jangan pakai AI</b> (ChatGPT dkk), dan jangan contek-contekan. Kalau ada yang belum kamu tahu, justru itu info bagus soal apa yang perlu dipelajari lagi 😉</p>
+ <p class="mu">${ex.qs.length} soal · ${ex.dur} menit · lulus jika benar lebih dari 75%. Timer baru jalan setelah kamu menekan tombol di bawah.</p>
+ <div class="row"><button data-a="home">Nanti dulu</button><button class="p" data-a="begin" data-id="${id}">Oke, aku siap — mulai exam</button></div></div>`};
+A.begin=({id})=>{ex=EX[id];T={ans:{},i:0,end:Date.now()+ex.dur*60000,t0:Date.now()};tick=setInterval(()=>{const l=T.end-Date.now();if(l<=0)return fin();const t=$('#tm');if(t){t.textContent=`⏱ ${Math.floor(l/60000)}:${String(Math.floor(l/1000)%60).padStart(2,'0')}`;t.classList.toggle('warn',l<60000)}},1000);qView()};
+function qView(){const q=ex.qs[T.i],n=ex.qs.length;
+ app.innerHTML=`<div class="card qc"><div class="row"><b>${esc(ex.title)}</b><span id="tm" class="pill tm">⏱</span></div><div class="prog"><i style="width:${Object.keys(T.ans).length/n*100}%"></i></div><p class="mu" style="margin:0">Soal ${T.i+1} dari ${n}, ${Object.keys(T.ans).length} terjawab</p><h3 class="qt">${esc(q.q)}</h3>
+ ${q.o.map((o,k)=>`<button class="opt ${T.ans[T.i]===k?'sel':''}" data-a="pick" data-k="${k}"><span class="lt">${'ABCDE'[k]}</span><span>${esc(o)}</span></button>`).join('')}
+ <div class="row" style="margin-top:12px"><button data-a="go" data-d="-1" ${T.i?'':'disabled'}>← Sebelumnya</button>${T.i<n-1?'<button class="p" data-a="go" data-d="1">Berikutnya →</button>':`<button class="p" data-a="fin" data-c="1">Selesai & Kirim</button>`}</div></div>
+ <div class="card">${ex.qs.map((_,k)=>`<button class="num ${T.ans[k]!==undefined?'sel':''} ${k==T.i?'cur':''}" data-a="jump" data-k="${k}">${k+1}</button>`).join('')}</div>`}
+A.pick=d=>{T.ans[T.i]=+d.k;qView()};A.go=d=>{T.i+=+d.d;qView()};A.jump=d=>{T.i=+d.k;qView()};
+let AT={};
+const pass=(c,t)=>c*4>t*3,pick=a=>a[Math.floor(Math.random()*a.length)];
+const MOT={
+ok:["Mantap! Usahamu kebayar lunas. Pertahankan ritmenya ya, tapi jangan lupa istirahat dan rayakan dikit 😄","Keren banget! Ini bukti kalau belajar dengan serius itu nggak pernah sia-sia. Gas terus ke level berikutnya!","Lulus dengan manis! Kamu boleh bangga sama diri sendiri hari ini. Habis ini, tantang dirimu dengan yang lebih seru 🚀"],
+near:["Dikit lagi, serius! Kamu udah deket banget sama batas lulus. Cek lagi yang kelewat, terus coba lagi — pasti tembus 💪","Hampir sampai! Selisihnya tipis kok. Pelajari bagian yang masih meleset, kesempatan berikutnya kamu pasti lebih siap."],
+bad:["Belum rezeki kali ini, tapi santai aja. Gagal itu bagian dari proses — lihat pembahasannya, ambil pelajarannya, lalu bangkit lagi 🌱","Nggak apa-apa, semua orang pernah di posisi ini. Satu hasil nggak menentukan kamu. Yang penting kamu mau coba lagi — next time pasti bisa!","Jangan patah semangat ya. Pelan-pelan aja, kuncinya konsisten. Baca lagi jawaban yang salah, kamu pasti lebih jago di percobaan berikutnya ✨"]};
+const mot=(c,t)=>pass(c,t)?pick(MOT.ok):pick(c/t>=.6?MOT.near:MOT.bad);
+const badge=x=>pass(x.correct,x.total)?'<span class="pill ok">LULUS</span>':'<span class="pill er">GAGAL</span>';
+const review=(det,rv=true)=>det.map((d,i)=>{const g=d.u===d.a;if(!d.o)return`<div class="qb"><b>${esc(d.q)}</b> <span class="${g?'ok':'er'}">${g?'✓ Benar':!d.r?'✗ Tidak dijawab':'✗ Salah'}</span><div class="${g?'ok':'er'}">Jawabanmu: <code>${esc(d.r||'—')}</code></div>${!g&&rv?`<div class="mu">Jawaban benar: <code>${esc(d.fa)}</code></div>`:''}</div>`;return`<div class="rq"><b>${i+1}. ${esc(d.q)}</b> <span class="${g?'ok':'er'}">${g?'✓ Benar':d.u<0?'✗ Tidak dijawab':'✗ Salah'}</span>${d.o.map((o,k)=>`<div class="ro ${k==d.a?'ok':k==d.u?'er':'mu'}">${'ABCDE'[k]}. ${esc(o)}${k==d.a?' ← jawaban benar':''}${k==d.u&&!g?' ← jawaban dipilih':''}</div>`).join('')}</div>`}).join('');
+const detCard=x=>`<div class="card"><div class="row"><h3 style="margin:0">${esc(x.uname)} — ${esc(x.etitle)}</h3><button data-a="cdt">Tutup</button></div><p>${badge(x)} Skor <b>${x.score}</b> · ${x.correct}/${x.total} benar</p>${x.notes?`<p><b>Catatan analis:</b><br>${esc(x.notes).replace(/\n/g,'<br>')}</p>`:''}${x.det?review(x.det,S.role=='admin'||x.rv!==false):'<p class="mu">Detail jawaban tidak tersedia untuk percobaan lama.</p>'}</div>`;
+A.det=d=>{$('#dt').innerHTML=detCard(AT[d.id]);$('#dt').scrollIntoView({behavior:'smooth'})};A.cdt=()=>{$('#dt').innerHTML=''};
+async function fin(){clearInterval(tick);const u=M.peserta,t=ex.qs.length,det=ex.qs.map((q,i)=>({q:q.q,o:q.o,a:q.a,u:T.ans[i]??-1})),c=det.filter(d=>d.u===d.a).length,s=Math.round(c/t*100),ok=pass(c,t);
+ try{await db.collection('attempts').add({uid:u.id,uname:u.name,eid:ex.id,etitle:ex.title,score:s,correct:c,total:t,at:Date.now(),secs:Math.round((Date.now()-T.t0)/1000),det})}catch(e){}
+ app.innerHTML=`<div class="card" style="text-align:center;max-width:460px;margin:20px auto"><p class="mu">Hasil ${esc(ex.title)}</p><div class="ring" style="--p:${s};--rc:${ok?'var(--ok)':'var(--er)'}"><span>${s}</span></div><h2 class="${ok?'ok':'er'}">${ok?'🎉 LULUS':'💪 BELUM LULUS'}</h2><p>${c} benar dari ${t} soal<br><span class="mu">Syarat lulus: benar lebih dari 75%</span></p><p>${esc(mot(c,t))}</p></div><div class="card"><h3>Pembahasan jawaban</h3>${review(det)}</div><div style="text-align:center"><button class="p" data-a="home">Kembali ke daftar exam</button></div>`}
+A.fin=fin;A.home=()=>render();A.ptab=d=>{S.pt=d.t;pView()};
+
+/* ===== CTF (peserta) ===== */
+const nz=s=>String(s??'').trim().toLowerCase(),dk=()=>'exhctf:'+M.peserta.id+':'+cx.id,sv=()=>{try{localStorage.setItem(dk(),JSON.stringify(CS))}catch(e){}};
+const EVC=['#8b5cf6','#14b8a6','#ec4899','#6366f1','#84cc16'];
+function evf(v){v=v.toLowerCase();document.querySelectorAll('.evr').forEach(e=>e.style.display=e.textContent.toLowerCase().includes(v)?'':'none');document.querySelectorAll('.evg').forEach(g=>g.style.display=[...g.querySelectorAll('.evr')].some(e=>e.style.display!='none')?'':'none')}
+A.cstart=({id})=>{cx=CT[id];let d=null;try{d=JSON.parse(localStorage.getItem(dk())||'null')}catch(e){}
+ app.innerHTML=`<div class="card" style="max-width:560px;margin:20px auto"><h2>🚩 ${esc(cx.title)}</h2><p style="white-space:pre-wrap">${esc(cx.desc)}</p>
+ <p>Ini <b>self-assessment</b> analisa insiden. Kamu akan dapat kumpulan evidence (log/record) dan daftar pertanyaan. Jawab berdasarkan hasil analisamu sendiri — tolong <b>jangan pakai AI</b> dan jangan contek, supaya hasilnya jujur.</p>
+ <p class="mu">${cx.qs.length} soal · ${(cx.ev||[]).length} evidence · ${cx.dur?cx.dur+' menit (timer jalan setelah tombol ditekan)':'tanpa batas waktu'} · lulus jika benar lebih dari 75%. Jawaban tidak peka huruf besar/kecil, tapi tanda baca dan spasi di dalam jawaban harus tepat. Draft tersimpan otomatis di browser ini.</p>
+ <div class="row"><button data-a="home">Nanti dulu</button><button class="p" data-a="cbegin" data-id="${id}">${d&&d.t0?'Lanjutkan analisa':'Mulai analisa'}</button></div></div>`};
+A.cbegin=({id})=>{cx=CT[id];let d=null;try{d=JSON.parse(localStorage.getItem(dk())||'null')}catch(e){}
+ CS=d&&d.t0&&!(cx.dur&&Date.now()>d.t0+cx.dur*60000)?d:{ans:{},notes:'',t0:Date.now()};sv();
+ if(cx.dur)tick=setInterval(()=>{const l=CS.t0+cx.dur*60000-Date.now();if(l<=0)return cfin();const t=$('#tm');if(t)t.textContent=`⏱ ${Math.floor(l/60000)}:${String(Math.floor(l/1000)%60).padStart(2,'0')}`},1000);
+ cView()};
+function cView(){const gs=[...new Set((cx.ev||[]).map(e=>e.g||'Evidence'))],hs=cx.hints||[];
+ app.innerHTML=`<div class="card tint" style="--gc:#0ea5e9"><div class="row"><b>🚩 ${esc(cx.title)}</b>${cx.dur?'<span id="tm" class="pill">⏱</span>':''}</div><p style="white-space:pre-wrap">${esc(cx.desc)}</p>
+ ${hs.length?`<details><summary>Petunjuk (${hs.length})</summary>${hs.map(h=>`<p class="mu">💡 ${esc(h)}</p>`).join('')}</details>`:''}</div>
+ <div class="card"><h3>Evidence</h3><input placeholder="Cari di evidence… (ID record, GUID, IP, host)" oninput="evf(this.value)" style="margin-bottom:0"></div>
+ ${gs.map((g,gi)=>`<div class="card tint evg" style="--gc:${EVC[gi%EVC.length]}"><h3>${esc(g)}</h3>${cx.ev.filter(e=>(e.g||'Evidence')==g).map(e=>`<div class="evr"><b class="idb">${esc(e.id)}</b><pre>${esc(e.t)}</pre></div>`).join('')}</div>`).join('')}
+ <div class="card tint" style="--gc:#f59e0b"><h3>Pertanyaan</h3>${cx.qs.map((x,i)=>`<div class="qb"><b>${esc(x.id||'Q'+(i+1))}</b> ${esc(x.q)}${x.f?`<div class="mu">Format jawaban: ${esc(x.f)}</div>`:''}
+ <input value="${esc(CS.ans[i]||'')}" oninput="CS.ans[${i}]=this.value;sv()" autocomplete="off" autocapitalize="none" spellcheck="false"></div>`).join('')}
+ <label>${esc(cx.notes||'Catatan analis (opsional): alur kejadian, distraktor yang dikesampingkan, ketidakpastian yang tersisa')}</label><textarea rows="5" oninput="CS.notes=this.value;sv()">${esc(CS.notes||'')}</textarea>
+ <p id="err" class="er"></p><div class="row"><button data-a="home">Keluar (draft tersimpan)</button><button class="p" data-a="cfin" data-c="1">Selesai & Kirim</button></div></div>`}
+async function cfin(){clearInterval(tick);const u=M.peserta,t=cx.qs.length,
+ det=cx.qs.map((x,i)=>{const r=(CS.ans[i]||'').trim(),n=nz(r),m=x.a.find(y=>nz(y)==n);return{q:(x.id?x.id+' — ':'')+x.q,r,u:n,a:nz(m!==undefined?m:x.a[0]),fa:x.a[0]}}),
+ c=det.filter(d=>d.u===d.a).length,s=Math.round(c/t*100),ok=pass(c,t),rv=cx.reveal!==false;
+ try{await db.collection('attempts').add({kind:'ctf',rv,uid:u.id,uname:u.name,eid:cx.id,etitle:cx.title,score:s,correct:c,total:t,at:Date.now(),secs:Math.round((Date.now()-CS.t0)/1000),det,notes:CS.notes||''})}
+ catch(e){const m=$('#err');if(m)m.textContent='Gagal mengirim ('+(e.message||e)+'). Draft aman — coba tekan Selesai & Kirim lagi.';return}
+ try{localStorage.removeItem(dk())}catch(e){}
+ app.innerHTML=`<div class="card" style="text-align:center;max-width:460px;margin:20px auto"><p class="mu">Hasil ${esc(cx.title)}</p><div class="ring" style="--p:${s};--rc:${ok?'var(--ok)':'var(--er)'}"><span>${s}</span></div><h2 class="${ok?'ok':'er'}">${ok?'🎉 LULUS':'💪 BELUM LULUS'}</h2><p>${c} benar dari ${t} soal<br><span class="mu">Syarat lulus: benar lebih dari 75%</span></p><p>${esc(mot(c,t))}</p></div>
+ <div class="card"><h3>Pembahasan jawaban</h3>${rv?'':'<p class="mu">Kunci jawaban disembunyikan untuk kasus ini.</p>'}${review(det,rv)}</div><div style="text-align:center"><button class="p" data-a="home">Kembali ke daftar</button></div>`}
+A.cfin=()=>cfin();
+
+/* ===== ADMIN ===== */
+function aView(){const u=M.admin;app.innerHTML=bar(u)+`<div class="tabs">${[['exams','Exam'],['ctf','CTF'],['users','Pengguna'],['scores','Skor']].map(([k,l])=>`<button class="${S.tab==k?'on':''}" data-a="tab" data-t="${k}">${l}</button>`).join('')}</div><div id="pane"><p class="mu">Memuat…</p></div>`;({exams:aExams,ctf:aCtf,users:aUsers,scores:aScores})[S.tab]()}
+A.tab=d=>{S.tab=d.t;F=null;S.eu=null;aView()};
+async function aExams(){if(F)return formView();const q=await db.collection('exams').get();EX={};q.docs.forEach(d=>EX[d.id]={id:d.id,...d.data()});
+ $('#pane').innerHTML=`<div class="row" style="margin-bottom:12px"><h3 style="margin:0">Daftar Exam</h3><button class="p" data-a="new">+ Exam Baru</button></div>
+ <div class="card tw"><table><tr><th>Judul</th><th>Soal</th><th>Durasi</th><th>Buka sampai</th><th>Status</th><th></th></tr>${Object.values(EX).map(x=>`<tr><td>${esc(x.title)}</td><td>${x.qs.length}</td><td>${x.dur} mnt</td><td>${x.until?fmt(x.until):'—'}</td><td>${x.active===false?'Nonaktif':'Aktif'}</td>
+ <td><button data-a="edit" data-id="${x.id}">Edit</button> <button class="d" data-a="delx" data-c="1" data-id="${x.id}">Hapus</button></td></tr>`).join('')||'<tr><td colspan=6 class="mu">Belum ada exam.</td></tr>'}</table></div>`}
+A.new=()=>{F={title:'',desc:'',dur:30,until:'',active:true,qs:[]};formView()};
+A.edit=d=>{F=JSON.parse(JSON.stringify(EX[d.id]));F.until=F.until||'';formView()};
+A.delx=async d=>{await db.doc('exams/'+d.id).delete();aExams()};
+function formView(){$('#pane').innerHTML=`<div class="card"><h3>${F.id?'Edit':'Buat'} Exam</h3>
+ <label>Judul</label><input value="${esc(F.title)}" oninput="F.title=this.value"><label>Deskripsi</label><textarea rows="2" oninput="F.desc=this.value">${esc(F.desc)}</textarea>
+ <div class="grid"><div><label>Durasi pengerjaan (menit)</label><input type="number" min="1" value="${F.dur}" oninput="F.dur=+this.value"></div>
+ <div><label>Dapat diambil sampai (opsional)</label><input type="datetime-local" value="${esc(F.until)}" oninput="F.until=this.value"></div>
+ <div><label>Status</label><select onchange="F.active=this.value=='1'"><option value="1" ${F.active!==false?'selected':''}>Aktif</option><option value="0" ${F.active===false?'selected':''}>Nonaktif</option></select></div></div>
+ <label>Isi soal dari file CSV</label><input type="file" accept=".csv,text/csv" onchange="impCsv(this.files[0],false)">
+ <p class="mu">Kolom: <code>pertanyaan,opsi_a,opsi_b,opsi_c,opsi_d,jawaban</code> (jawaban = A/B/C/D, baris header boleh ada). CSV <b>menambah</b> ke soal yang ada.</p><p id="err" class="er"></p>
+ <h3>${F.qs.length} soal</h3><div style="max-height:260px;overflow:auto">${F.qs.map((q,i)=>`<div class="row" style="border-bottom:1px solid var(--bd);padding:6px 0"><span>${i+1}. ${esc(q.q)} <span class="mu">(jawaban: ${'ABCDE'[q.a]})</span></span><button class="d" data-a="dq" data-i="${i}">✕</button></div>`).join('')}</div>
+ <div class="row" style="margin-top:14px"><button data-a="cancel">Batal</button><button class="p" data-a="save">Simpan Exam</button></div></div>`}
+A.dq=d=>{F.qs.splice(+d.i,1);formView()};A.cancel=()=>{F=null;aExams()};
+A.save=async()=>{try{if(!F.title.trim())throw'Judul wajib diisi';if(!(F.dur>0))throw'Durasi tidak valid';if(!F.qs.length)throw'Tambahkan minimal 1 soal';
+ const id=F.id||db.collection('exams').doc().id,{title,desc,dur,until,active,qs}=F;await db.doc('exams/'+id).set({title:title.trim(),desc:desc||'',dur,until:until||'',active:active!==false,qs,at:Date.now()});F=null;aExams()}catch(e){err(e)}};
+function csv(t){const r=[];let w=[],c='',q=0;for(let i=0;i<t.length;i++){const h=t[i];if(q){if(h=='"'){if(t[i+1]=='"'){c+='"';i++}else q=0}else c+=h}else if(h=='"')q=1;else if(h==',')w.push(c),c='';else if(h=='\n'||h=='\r'){if(h=='\r'&&t[i+1]=='\n')i++;w.push(c);c='';if(w.some(x=>x.trim()))r.push(w);w=[]}else c+=h}w.push(c);if(w.some(x=>x.trim()))r.push(w);return r}
+async function impCsv(f){if(!f)return;try{const rows=csv((await f.text()).replace(/^\uFEFF/,'')),out=[];
+ rows.forEach((r,n)=>{const L=(r[5]||'').trim().toUpperCase(),ai='ABCD'.indexOf(L);if(ai<0){if(n==0)return;throw`Baris ${n+1}: jawaban harus A/B/C/D`}
+ const o=r.slice(1,5).map(x=>x.trim()),keep=o.map((x,k)=>x?k:-1).filter(k=>k>=0),a=keep.indexOf(ai);if(!r[0].trim()||keep.length<2||a<0)throw`Baris ${n+1}: soal/opsi/jawaban tidak valid`;
+ out.push({q:r[0].trim(),o:keep.map(k=>o[k]),a})});
+ if(!out.length)throw'Tidak ada soal ditemukan di file';F.qs.push(...out);formView()}catch(e){formView();err(e)}}
+/* CSV kasus CTF: kolom tipe,id,grup,teks,jawaban,format
+   tipe: judul | deskripsi | evidence | soal | hint | catatan  (jawaban boleh banyak, pisahkan dengan |) */
+async function aCtf(){if(F)return cForm();const q=await db.collection('ctf').get();CT={};q.docs.forEach(d=>CT[d.id]={id:d.id,...d.data()});
+ $('#pane').innerHTML=`<div class="row" style="margin-bottom:12px"><h3 style="margin:0">Kasus CTF</h3><div><button data-a="ctpl">⬇ Template CSV</button> <button class="p" data-a="cnew">+ Kasus Baru</button></div></div>
+ <div class="card tw"><table><tr><th>Judul</th><th>Soal</th><th>Evidence</th><th>Durasi</th><th>Buka sampai</th><th>Status</th><th></th></tr>${Object.values(CT).map(x=>`<tr><td>${esc(x.title)}</td><td>${x.qs.length}</td><td>${(x.ev||[]).length}</td><td>${x.dur?x.dur+' mnt':'—'}</td><td>${x.until?fmt(x.until):'—'}</td><td>${x.active===false?'Nonaktif':'Aktif'}</td>
+ <td><button data-a="cedit" data-id="${x.id}">Edit</button> <button class="d" data-a="cdel" data-c="1" data-id="${x.id}">Hapus</button></td></tr>`).join('')||'<tr><td colspan=7 class="mu">Belum ada kasus CTF.</td></tr>'}</table></div>`}
+A.cnew=()=>{F={title:'',desc:'',dur:0,until:'',active:true,reveal:true,ev:[],G:[{n:'Evidence',e:[]}],qs:[],hints:[],notes:''};cForm()};
+A.cedit=d=>{F=JSON.parse(JSON.stringify(CT[d.id]));F.until=F.until||'';F.ev=F.ev||[];F.hints=F.hints||[];F.G=toG(F.ev);cForm()};
+A.cdel=async d=>{await db.doc('ctf/'+d.id).delete();aCtf()};A.ccancel=()=>{F=null;aCtf()};
+A.ctpl=()=>{const t='tipe,id,grup,teks,jawaban,format\njudul,,,Contoh Kasus,,\ndeskripsi,,,"Skenario singkat kasus. Tulis konteks dan tujuan analisa di sini.",,\nhint,,,Gabungkan record berdasarkan GUID atau entry reference.,,\nevidence,L01,Entry evidence,"WEB_DELIVERY 2026-09-10T09:00:00Z\nhost=ws-001 | server_ip=198.51.100.40 | artifact=Statement.docx",,\nevidence,L02,Investigation evidence,"SYSMON 2026-09-10T09:00:30Z\nevent_id=1 | image=powershell.exe | user=ORION\\amira001",,\nsoal,Q01,,Which server IP delivered the artifact?,198.51.100.40,IPv4 address\nsoal,Q02,,Which Windows account ran PowerShell?,ORION\\amira001|amira001,domain\\account\ncatatan,,,"Catatan analis: tulis alur, satu distraktor yang dikesampingkan, dan satu ketidakpastian.",,\n',
+ a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\uFEFF'+t],{type:'text/csv'}));a.download='template-ctf.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+const toG=ev=>{const g=[];(ev||[]).forEach(e=>{const n=e.g||'Evidence';let x=g.find(y=>y.n==n);if(!x)g.push(x={n,e:[]});x.e.push({id:e.id,t:e.t})});return g},
+ toEv=G=>G.flatMap(g=>g.e.filter(e=>e.id.trim()||e.t.trim()).map(e=>({id:e.id.trim(),g:g.n.trim()||'Evidence',t:e.t.trim()})));
+/* tempel teks dari PDF: tiap record diawali ID (L01 ASSET_INVENTORY ...); baris lanjutan digabung */
+function parseEv(t){const out=[];let cur=null;t.replace(/\r/g,'').split('\n').forEach(l=>{const m=l.match(/^\s*([A-Za-z]{1,4}\d{1,4})\s+([A-Z][A-Z_0-9]{2,}\b.*)$/);
+ if(m){cur={id:m[1],t:m[2].trim()};out.push(cur)}else if(l.trim()){if(!cur)out.push(cur={id:'',t:l.trim()});else cur.t+=(cur.t.includes('\n')?' ':'\n')+l.trim()}});return out}
+/* tempel pertanyaan: "Q01  teks ..." + baris "Required answer format: ..." (kunci jawaban diisi manual) */
+function parseQs(t){const out=[];let cur=null;t.replace(/\r/g,'').split('\n').forEach(l=>{const m=l.match(/^\s*(Q\d+)\s+(\S.*)$/i),f=l.match(/^\s*(?:Required answer format|Format jawaban|Format)\s*:\s*(.*)$/i);
+ if(m){cur={id:m[1].toUpperCase(),q:m[2].trim(),a:[],f:''};out.push(cur)}else if(cur&&f)cur.f=f[1].trim().replace(/\.$/,'');else if(cur&&l.trim())cur.q+=' '+l.trim()});return out}
+function cForm(){const G=F.G||(F.G=toG(F.ev));
+ $('#pane').innerHTML=`<div class="card"><h3>${F.id?'Edit':'Buat'} Kasus CTF</h3>
+ <label>Judul</label><input value="${esc(F.title)}" oninput="F.title=this.value"><label>Deskripsi / skenario</label><textarea rows="4" oninput="F.desc=this.value">${esc(F.desc)}</textarea></div>
+ <div class="card"><div class="row" style="margin-bottom:8px"><h3 style="margin:0">Evidence</h3><button data-a="gadd">+ Grup evidence</button></div>
+ ${G.map((g,gi)=>`<div class="gb"><div class="row" style="flex-wrap:nowrap"><input value="${esc(g.n)}" placeholder="Nama grup, mis. Entry and process evidence" oninput="F.G[${gi}].n=this.value" style="font-weight:600;margin:0"><button class="d" data-a="gdel" data-c="1" data-g="${gi}">Hapus grup</button></div>
+ ${g.e.map((e,ei)=>`<div class="row" style="flex-wrap:nowrap;align-items:flex-start;margin-top:8px"><input value="${esc(e.id)}" placeholder="L01" oninput="F.G[${gi}].e[${ei}].id=this.value" style="width:76px;flex:none;margin:0"><textarea class="mono" rows="3" placeholder="ASSET_INVENTORY 2026-09-10T08:58:00Z&#10;host=ws-578 | ipv4=10.42.1.130 | ..." oninput="F.G[${gi}].e[${ei}].t=this.value" style="flex:1;min-width:0;margin:0">${esc(e.t)}</textarea><button class="d" data-a="edel" data-g="${gi}" data-e="${ei}">✕</button></div>`).join('')}
+ <div style="margin-top:10px"><button data-a="eadd" data-g="${gi}">+ Evidence</button></div>
+ <details><summary>Tempel banyak evidence sekaligus</summary><textarea class="mono" id="bk${gi}" rows="6" placeholder="Tempel teks dari PDF. Tiap record diawali ID, mis.&#10;L01 ASSET_INVENTORY 2026-09-10T08:58:00Z&#10;host=ws-578 | ipv4=10.42.1.130 | ..."></textarea><button data-a="gbulk" data-g="${gi}">Tambahkan ke grup ini</button></details></div>`).join('')||'<p class="mu">Belum ada grup evidence.</p>'}</div>
+ <div class="card"><div class="row" style="margin-bottom:8px"><h3 style="margin:0">Pertanyaan CTF</h3><button data-a="qadd">+ Pertanyaan</button></div>
+ ${F.qs.map((q,i)=>`<div class="gb"><div class="row" style="flex-wrap:nowrap;align-items:flex-start"><input value="${esc(q.id)}" placeholder="Q01" oninput="F.qs[${i}].id=this.value" style="width:76px;flex:none;margin:0"><textarea rows="2" placeholder="Teks pertanyaan" oninput="F.qs[${i}].q=this.value" style="flex:1;min-width:0;margin:0">${esc(q.q)}</textarea><button class="d" data-a="qdel" data-c="1" data-i="${i}">✕</button></div>
+ <div class="grid" style="margin-top:8px"><div><label>Format jawaban (petunjuk untuk peserta)</label><input value="${esc(q.f||'')}" placeholder="IPv4 address" oninput="F.qs[${i}].f=this.value"></div>
+ <div><label>Kunci jawaban (satu per baris, semua dianggap benar)</label><textarea rows="2" oninput="F.qs[${i}].a=this.value.split('\\n').map(x=>x.trim()).filter(Boolean)">${esc(q.a.join('\n'))}</textarea></div></div></div>`).join('')||'<p class="mu">Belum ada pertanyaan.</p>'}
+ <details><summary>Tempel banyak pertanyaan sekaligus</summary><textarea id="bkq" rows="6" placeholder="Q01  Which server IP delivered the artifact...&#10;Required answer format: IPv4 address.&#10;&#10;Q02  Which host ran the PowerShell process...&#10;Required answer format: host name."></textarea><button data-a="qbulk">Tambahkan</button><p class="mu">Kunci jawaban tetap diisi manual setelahnya.</p></details></div>
+ <div class="card"><h3>Pengaturan</h3><div class="grid"><div><label>Durasi (menit, 0 = tanpa timer)</label><input type="number" min="0" value="${F.dur||0}" oninput="F.dur=+this.value||0"></div>
+ <div><label>Dapat diambil sampai (opsional)</label><input type="datetime-local" value="${esc(F.until)}" oninput="F.until=this.value"></div>
+ <div><label>Status</label><select onchange="F.active=this.value=='1'"><option value="1" ${F.active!==false?'selected':''}>Aktif</option><option value="0" ${F.active===false?'selected':''}>Nonaktif</option></select></div>
+ <div><label>Kunci jawaban setelah submit</label><select onchange="F.reveal=this.value=='1'"><option value="1" ${F.reveal!==false?'selected':''}>Tampilkan</option><option value="0" ${F.reveal===false?'selected':''}>Sembunyikan</option></select></div></div>
+ <label>Petunjuk / hint (satu per baris, opsional)</label><textarea rows="2" oninput="F.hints=this.value.split('\\n').map(x=>x.trim()).filter(Boolean)">${esc((F.hints||[]).join('\n'))}</textarea>
+ <label>Instruksi catatan analis (opsional)</label><textarea rows="2" oninput="F.notes=this.value">${esc(F.notes||'')}</textarea></div>
+ <div class="card"><details><summary>Import dari CSV (opsional)</summary><p class="mu">Kolom: <code>tipe,id,grup,teks,jawaban,format</code>. Tipe: <code>judul</code>, <code>deskripsi</code>, <code>evidence</code>, <code>soal</code>, <code>hint</code>, <code>catatan</code>. Beberapa jawaban dipisah <code>|</code>. CSV <b>menggantikan</b> evidence, pertanyaan, hint, dan catatan yang ada; hasilnya bisa diedit di form ini.</p>
+ <input type="file" accept=".csv,text/csv" onchange="impCtf(this.files[0])"><button type="button" data-a="ctpl">⬇ Unduh template CSV</button></details></div>
+ <p id="err" class="er"></p><div class="row"><button data-a="ccancel">Batal</button><button class="p" data-a="csave">Simpan Kasus</button></div>`}
+A.gadd=()=>{F.G.push({n:'',e:[{id:'',t:''}]});cForm()};A.gdel=d=>{F.G.splice(+d.g,1);cForm()};
+A.eadd=d=>{F.G[+d.g].e.push({id:'',t:''});cForm()};A.edel=d=>{F.G[+d.g].e.splice(+d.e,1);cForm()};
+A.gbulk=d=>{const r=parseEv($('#bk'+d.g).value);if(!r.length)return err('Tidak ada record ditemukan di teks yang ditempel');const g=F.G[+d.g];g.e=g.e.filter(e=>e.id||e.t).concat(r);cForm()};
+A.qadd=()=>{F.qs.push({id:'Q'+String(F.qs.length+1).padStart(2,'0'),q:'',a:[],f:''});cForm()};A.qdel=d=>{F.qs.splice(+d.i,1);cForm()};
+A.qbulk=()=>{const r=parseQs($('#bkq').value);if(!r.length)return err('Tidak ada pertanyaan ditemukan (awali tiap pertanyaan dengan Q01, Q02, ...)');F.qs.push(...r);cForm()};
+async function impCtf(f){if(!f)return;try{const rows=csv((await f.text()).replace(/^\uFEFF/,'')),ev=[],qs=[],hints=[],ds=[];let title='',notes='';
+ rows.forEach((r,n)=>{const t=nz(r[0]);if(n==0&&t=='tipe')return;const id=(r[1]||'').trim(),g=(r[2]||'').trim(),tx=(r[3]||'').trim(),L=`Baris ${n+1}: `;
+  if(t=='judul')title=tx;else if(t=='deskripsi')ds.push(tx);else if(t=='catatan')notes=tx;else if(t=='hint'||t=='petunjuk')hints.push(tx);
+  else if(t=='evidence'){if(!id||!tx)throw L+'evidence butuh id dan teks';ev.push({id,g,t:(r[3]||'').trim()})}
+  else if(t=='soal'){const a=(r[4]||'').split('|').map(x=>x.trim()).filter(Boolean);if(!tx||!a.length)throw L+'soal butuh teks pertanyaan dan jawaban';qs.push({id:id||'Q'+(qs.length+1),q:tx,a,f:(r[5]||'').trim()})}
+  else throw L+`tipe "${r[0]}" tidak dikenal (judul/deskripsi/evidence/soal/hint/catatan)`});
+ if(!qs.length)throw'Tidak ada baris "soal" di file';if(title)F.title=title;if(ds.length)F.desc=ds.join('\n\n');F.ev=ev;F.G=toG(ev);F.qs=qs;F.hints=hints;F.notes=notes;cForm()}catch(e){cForm();err(e)}}
+A.csave=async()=>{try{if(!F.title.trim())throw'Judul wajib diisi';if(!F.qs.length)throw'Tambahkan minimal 1 pertanyaan';const ev=toEv(F.G);if(ev.some(e=>!e.id||!e.t))throw'Setiap evidence butuh ID dan isi record';const qi=F.qs.findIndex(q=>!q.id.trim()||!q.q.trim()||!q.a.length);if(qi>=0)throw'Pertanyaan nomor '+(qi+1)+' belum lengkap (ID, teks, dan kunci jawaban wajib)';
+ const id=F.id||db.collection('ctf').doc().id,{title,desc,dur,until,active,reveal,hints,notes}=F,qs=F.qs.map(q=>({id:q.id.trim(),q:q.q.trim(),a:q.a,f:(q.f||'').trim()}));await db.doc('ctf/'+id).set({title:title.trim(),desc:desc||'',dur:dur||0,until:until||'',active:active!==false,reveal:reveal!==false,ev,qs,hints,notes:notes||'',at:Date.now()});F=null;aCtf()}catch(e){err(e)}};
+async function aUsers(){const q=await db.collection('users').get(),us=q.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>a.at-b.at),e=S.eu&&us.find(x=>x.id==S.eu);
+ $('#pane').innerHTML=(e?`<div class="card"><h3>Edit @${esc(e.id)}</h3><label>Nama</label><input id="en" value="${esc(e.name)}"><label>Peran</label><select id="er"><option value="peserta" ${e.role!='admin'?'selected':''}>Peserta</option><option value="admin" ${e.role=='admin'?'selected':''}>Admin</option></select>
+ <label>Password baru (kosongkan jika tidak diubah)</label><input id="ep" type="password"><div class="row"><button data-a="eucancel">Batal</button><button class="p" data-a="eusave" data-id="${e.id}">Simpan</button></div></div>`:'')+
+ `<div class="card tw"><table><tr><th>Nama</th><th>Username</th><th>Peran</th><th>Terdaftar</th><th></th></tr>${us.map(x=>`<tr><td>${esc(x.name)}</td><td>@${esc(x.id)}</td><td>${x.role}</td><td>${fmt(x.at)}</td><td><button data-a="eu" data-id="${x.id}">Edit</button> ${x.id!=M.admin.id?`<button class="d" data-a="delu" data-c="1" data-id="${x.id}">Hapus</button>`:''}</td></tr>`).join('')}</table></div>`}
+A.eu=d=>{S.eu=d.id;aUsers()};A.eucancel=()=>{S.eu=null;aUsers()};
+A.eusave=async d=>{const p={name:val('en').trim()||d.id,role:val('er')};if(val('ep'))p.pw=await H(val('ep'));await db.doc('users/'+d.id).update(p);S.eu=null;aUsers()};
+A.delu=async d=>{await db.doc('users/'+d.id).delete();aUsers()};
+async function aScores(){const [e0,a,ct]=await Promise.all([db.collection('exams').get(),db.collection('attempts').get(),db.collection('ctf').get()]),e={docs:[...e0.docs,...ct.docs.map(d=>({id:d.id,data:()=>({...d.data(),title:'🚩 '+d.data().title})}))]};S.f=S.f||'';
+ const all=a.docs.map(d=>({id:d.id,...d.data()})).sort((x,y)=>y.at-x.at),at=all.filter(x=>!S.f||x.eid==S.f);AT={};all.forEach(x=>AT[x.id]=x);
+ const n=at.length,lu=at.filter(x=>pass(x.correct,x.total)).length,avg=n?Math.round(at.reduce((s,x)=>s+x.score,0)/n):'—';
+ $('#pane').innerHTML=`<div class="card"><div class="row"><div><label>Filter exam</label><select onchange="S.f=this.value;aScores()"><option value="">Semua exam</option>${e.docs.map(d=>`<option value="${d.id}" ${S.f==d.id?'selected':''}>${esc(d.data().title)}</option>`).join('')}</select></div>
+ <div><span class="pill">${n} percobaan</span> <span class="pill">Rata-rata ${avg}</span> <span class="pill ok">Lulus ${lu}</span> <span class="pill er">Gagal ${n-lu}</span></div></div>
+ <div class="row" style="margin-top:6px"><span class="mu">Kirim ringkasan ${S.f?'exam ini':'semua exam'} ke grup Telegram</span><button class="p" data-a="tg">Kirim ke Telegram</button></div><p id="tgm" class="mu"></p></div><div id="dt"></div>
+ <div class="card tw"><table><tr><th>Peserta</th><th>Exam</th><th>Skor</th><th>Status</th><th>Benar</th><th>Waktu</th><th></th></tr>${at.map(x=>`<tr><td>${esc(x.uname)}</td><td>${esc(x.etitle)}</td><td><b>${x.score}</b></td><td>${badge(x)}</td><td>${x.correct}/${x.total}</td><td>${fmt(x.at)}</td><td><button data-a="det" data-id="${x.id}">Lihat jawaban</button></td></tr>`).join('')||'<tr><td colspan=7 class="mu">Belum ada data skor.</td></tr>'}</table></div>`}
+A.tg=async()=>{const m=$('#tgm');m.textContent='Mengirim…';try{const r=await fetch(API+'summary'+(S.f?'/'+S.f:''),{method:'POST'});m.textContent=r.ok?'Ringkasan masuk antrean Telegram ✓ (terkirim saat server online)':await r.text()}catch(e){m.textContent='Gagal menghubungi server'}};
+</script></body></html>
